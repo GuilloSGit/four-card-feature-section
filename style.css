@@ -1,0 +1,143 @@
+:root {
+    --very-light-gray: hsl(0, 0%, 98%);
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayishblue: hsl(229, 6%, 66%);
+}
+
+body {
+    max-width: 85%;
+    background-color: var(--very-light-gray);
+    font-family: poppins, sans-serif;
+}
+
+.main-header {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px 30px 15px;
+    color: var(--very-dark-blue);
+}
+
+.main-title {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.subtitle {
+    margin: auto;
+    max-width: 65%;
+}
+
+.cards {
+    text-align: left;
+    margin-bottom: 10px;
+    display: grid;
+    padding: 0 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 6px;
+    box-shadow: 5px 5px 20px hsl(229, 6%, 66%);
+    border-radius: 10px;
+}
+
+.card__title {
+    margin-top: 10px;
+}
+
+.card__description {
+    color: var(--very-dark-blue);
+}
+
+.card__supervisor {
+    display: flex;
+    justify-content: left;
+    border-top: 4px solid var(--cyan);
+}
+
+.card__teambuilder {
+    border-top: 4px solid var(--red);
+}
+
+.card__karma {
+    border-top: 4px solid var(--orange);
+}
+
+.card__calculator {
+    border-top: 4px solid var(--blue);
+}
+
+span.card__svg {
+    display: flex;
+    justify-content: end;
+}
+
+img {
+    align-self: flex-end;
+    max-width: 45px;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        max-width: 95%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .cards {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 350px);
+        gap: 10px;
+    }
+    .card {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .cards {
+        justify-content: center;
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: repeat(2, 250px);
+        gap: 10px;
+    }
+}
+
+.card {
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    height: 210px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px #83a6d288;
+}
+
+@media screen and (min-width:1250px) {
+    body {
+        margin: 20px;
+    }
+    .cards {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2);
+        gap: 10px;
+    }
+    .card:first-child,
+    .card:last-child {
+        margin-top: 250px;
+    }
+    .card:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+}
