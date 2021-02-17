@@ -1,5 +1,5 @@
 :root {
-    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-gray: hsl(71, 44%, 95%);
     --red: hsl(0, 78%, 62%);
     --cyan: hsl(180, 62%, 55%);
     --orange: hsl(34, 97%, 64%);
@@ -40,6 +40,7 @@ body {
 }
 
 .card {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     margin: 10px;
