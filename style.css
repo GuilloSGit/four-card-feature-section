@@ -33,7 +33,6 @@ body {
 }
 
 .cards {
-    text-align: left;
     margin-bottom: 10px;
     display: grid;
     padding: 0 10px;
@@ -75,13 +74,9 @@ body {
     border-top: 4px solid var(--blue);
 }
 
-span.card__svg {
-    display: flex;
-    justify-content: end;
-}
-
 img {
-    align-self: flex-end;
+    margin-left: auto;
+    padding-right: 40px;
     max-width: 45px;
 }
 
